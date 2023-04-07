@@ -5,11 +5,11 @@ def CPP(Mesh):
     vertexs = Mesh.getVertexs()
     output = []
     output.append('void ' + formatName(Mesh.getName())+'(){\n')
-    output.append('   glBegin("GL_POLYGON")\n')
+    output.append(' \n')
     for vertex in vertexs:
         x, y, z = vertex
-        output.append('   glVertex3f({},{},{})\n'.format(x, y, z))
-    output.append('   glEnd()\n')
+        output.append('{0, 0, 0xff7f0000,({},{},{})},\n'.format(x, y, z))
+    output.append('\n')
     output.append('}\n')
     return output
 

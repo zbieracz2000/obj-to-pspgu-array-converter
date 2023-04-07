@@ -35,21 +35,21 @@ def convert():
                           for c in tokens[1:]])
     vertices, normals = [], []
     for face in f_arr:
-        print("glBegin(GL_POLYGON);")
-        app.setOutput("glBegin(GL_POLYGON);\n")
+        print("")
+        app.setOutput("\n")
         vert = [v_arr[tp[0]-1] for tp in face]
         for v in vert:
             # print("glVertex3f(", ",".join(
             #     [str(ve).split(".")[0]+"0" for ve in v]), ");\n")
-            app.setOutput('glVertex3d(')
+            app.setOutput('{1, 0, 0xff7f0000, ')
             app.setOutput(",".join([str(ve) for ve in v]))
-            app.setOutput(");\n")
+            app.setOutput("},\n")
 
         for tp in face:
             vertices += v_arr[tp[0]-1]
             normals += vn_arr[tp[2]-1]
-        print("glEnd();")
-        app.setOutput("glEnd();\n")
+        print("")
+        app.setOutput("\n")
     print(vertices)
 
     # for index, vert in enumerate(vertices):
