@@ -1,5 +1,5 @@
-# obj-to-opengl-code-converter
-Convert your wavefront (.obj) model to opengl code (C++)
+# obj-to-pspgu-array-converter
+Convert your wavefront (.obj) model to PSPGu arraay.
 # Usage
 The app can be started with the following commands
 
